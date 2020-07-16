@@ -11,15 +11,19 @@ spring:
         - id: Reservation
           uri: http://localhost:8081
           predicates:
-            - Path=/reservations/** 
+            - Path=/reservations/**
         - id: Trainer
           uri: http://localhost:8082
           predicates:
-            - Path=/trainers/** 
+            - Path=/trainers/**
         - id: Management
           uri: http://localhost:8083
           predicates:
-            - Path=/managements/** 
+            - Path=/managements/**
+        - id: reservationStatus
+          uri: http://localhost:8084
+          predicates:
+            - Path= /reservationStatuses/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -42,15 +46,19 @@ spring:
         - id: Reservation
           uri: http://Reservation:8080
           predicates:
-            - Path=/reservations/** 
+            - Path=/reservations/**
         - id: Trainer
           uri: http://Trainer:8080
           predicates:
-            - Path=/trainers/** 
+            - Path=/trainers/**
         - id: Management
           uri: http://Management:8080
           predicates:
-            - Path=/managements/** 
+            - Path=/managements/**
+        - id: reservationStatus
+          uri: http://reservationStatus:8080
+          predicates:
+            - Path= /reservationStatuses/**
       globalcors:
         corsConfigurations:
           '[/**]':
